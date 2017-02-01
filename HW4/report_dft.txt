@@ -1,0 +1,179 @@
+ 
+****************************************
+Report : area
+Design : DPA
+Version: G-2012.06
+Date   : Sat Nov 21 15:14:26 2015
+****************************************
+
+Library(s) Used:
+
+    typical (File: /home/raid2_2/course/cvsd/CBDK_IC_Contest/CIC/SynopsysDC/db/typical.db)
+
+Number of ports:                           96
+Number of nets:                          5047
+Number of cells:                         3428
+Number of combinational cells:           3071
+Number of sequential cells:               298
+Number of macros:                           0
+Number of buf/inv:                        921
+Number of references:                     202
+
+Combinational area:       61135.256839
+Noncombinational area:    12372.348183
+Net Interconnect area:    1085.000000  
+
+Total cell area:          73507.605022
+Total area:               74592.605022
+1
+
+Warning: Main library 'dw_foundation.sldb' does not specify the following units required for power: 'Leakage Power, Capacitance, Voltage, Time'. (PWR-424)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : DPA
+Version: G-2012.06
+Date   : Sat Nov 21 15:14:47 2015
+****************************************
+
+
+Library(s) Used:
+
+    typical (File: /home/raid2_2/course/cvsd/CBDK_IC_Contest/CIC/SynopsysDC/db/typical.db)
+
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+DPA                    ForQA             typical
+
+
+Global Operating Voltage = 1.2  
+Power-specific unit information :
+    Voltage Units = Unitless
+    Capacitance Units = Unitless
+    Time Units = Unitless
+    Dynamic Power Units = Unitless    (derived from V,C,T units)
+    Leakage Power Units = Unitless
+
+
+  Cell Internal Power  =   1.2627    (67%)
+  Net Switching Power  =   0.6244    (33%)
+                         ---------
+Total Dynamic Power    =   1.8872   (100%)
+
+Cell Leakage Power     = 20484430.0000 
+
+Error: Either dynamic power or leakage power, in the library, is unitless. Unable to display complete power group summary. (PWR-799)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000               NA   (     N/A)
+memory             0.0000            0.0000            0.0000               NA   (     N/A)
+black_box          0.0000            0.0000            0.0000               NA   (     N/A)
+clock_network      0.0000            0.0000            0.0000               NA   (     N/A)
+register           0.8426        3.7119e-02        3.6456e+06               NA   (     N/A)
+sequential         0.0000            0.0000            0.0000               NA   (     N/A)
+combinational      0.4201            0.5873        1.6839e+07               NA   (     N/A)
+--------------------------------------------------------------------------------------------------
+Total              1.2627            0.6244        2.0485e+07               NA        
+1
+
+
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : DPA
+Version: G-2012.06
+Date   : Sat Nov 21 15:14:36 2015
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: segmented
+
+  Startpoint: pix_c_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: count_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DPA                ForQA                 typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pix_c_reg[0]/CK (SDFFRXL)                               0.00       0.00 r
+  pix_c_reg[0]/Q (SDFFRXL)                                0.29       0.29 f
+  U2533/Y (INVXL)                                         0.20       0.49 r
+  U2534/Y (INVX8)                                         0.07       0.56 f
+  U628/Y (CLKINVX16)                                      0.05       0.61 r
+  U34/Y (CLKINVX1)                                        0.06       0.66 f
+  add_1_root_add_1_root_add_441_3/A[1] (DPA_DW01_add_48)
+                                                          0.00       0.66 f
+  add_1_root_add_1_root_add_441_3/U1_1/CO (ADDFXL)        0.34       1.01 f
+  add_1_root_add_1_root_add_441_3/U1_2/CO (ADDFXL)        0.22       1.23 f
+  add_1_root_add_1_root_add_441_3/U1_3/CO (ADDFXL)        0.22       1.46 f
+  add_1_root_add_1_root_add_441_3/U1_4/S (ADDFXL)         0.14       1.60 f
+  add_1_root_add_1_root_add_441_3/SUM[4] (DPA_DW01_add_48)
+                                                          0.00       1.60 f
+  add_0_root_add_1_root_add_441_3/B[4] (DPA_DW01_add_47)
+                                                          0.00       1.60 f
+  add_0_root_add_1_root_add_441_3/U1_4/CO (ADDFXL)        0.40       2.00 f
+  add_0_root_add_1_root_add_441_3/U1_5/CO (ADDFXL)        0.22       2.22 f
+  add_0_root_add_1_root_add_441_3/U1_6/CO (ADDFXL)        0.22       2.45 f
+  add_0_root_add_1_root_add_441_3/U1_7/CO (ADDFXL)        0.22       2.67 f
+  add_0_root_add_1_root_add_441_3/U1_8/CO (ADDFXL)        0.22       2.90 f
+  add_0_root_add_1_root_add_441_3/U1_9/CO (ADDFXL)        0.22       3.12 f
+  add_0_root_add_1_root_add_441_3/U1_10/CO (ADDFXL)       0.22       3.35 f
+  add_0_root_add_1_root_add_441_3/U1_11/CO (ADDFXL)       0.22       3.57 f
+  add_0_root_add_1_root_add_441_3/U1_12/CO (ADDFXL)       0.22       3.80 f
+  add_0_root_add_1_root_add_441_3/U1_13/CO (ADDFXL)       0.22       4.02 f
+  add_0_root_add_1_root_add_441_3/U1_14/CO (ADDFXL)       0.22       4.24 f
+  add_0_root_add_1_root_add_441_3/U1_15/CO (ADDFXL)       0.22       4.47 f
+  add_0_root_add_1_root_add_441_3/U1_16/CO (ADDFXL)       0.22       4.69 f
+  add_0_root_add_1_root_add_441_3/U1_17/CO (ADDFXL)       0.24       4.94 f
+  add_0_root_add_1_root_add_441_3/U2/Y (AND2X2)           0.12       5.06 f
+  add_0_root_add_1_root_add_441_3/U4/Y (XOR2X1)           0.09       5.15 f
+  add_0_root_add_1_root_add_441_3/SUM[19] (DPA_DW01_add_47)
+                                                          0.00       5.15 f
+  U4398/Y (AOI221XL)                                      0.22       5.37 r
+  U3437/Y (XOR2X1)                                        0.15       5.52 r
+  U3432/Y (AND4X1)                                        0.16       5.68 r
+  U3406/Y (NAND4X1)                                       0.05       5.73 f
+  U3405/Y (NAND2X1)                                       0.14       5.87 r
+  U3403/Y (NAND3BX1)                                      0.11       5.98 r
+  U3402/Y (OAI211X1)                                      0.06       6.04 f
+  U3293/Y (OAI2BB2XL)                                     0.12       6.16 f
+  U3292/Y (OAI31XL)                                       0.25       6.41 r
+  U2571/Y (INVX3)                                         0.05       6.46 f
+  U3185/Y (AO22X1)                                        0.20       6.66 f
+  count_reg[0]/D (SDFFRXL)                                0.00       6.66 f
+  data arrival time                                                  6.66
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  count_reg[0]/CK (SDFFRXL)                               0.00      10.00 r
+  library setup time                                     -0.23       9.77
+  data required time                                                 9.77
+  --------------------------------------------------------------------------
+  data required time                                                 9.77
+  data arrival time                                                 -6.66
+  --------------------------------------------------------------------------
+  slack (MET)                                                        3.11
+
+
+1

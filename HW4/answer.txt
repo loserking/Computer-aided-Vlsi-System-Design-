@@ -1,0 +1,45 @@
+A1:
+298
+
+A2:
+1chain:298 cells
+
+A3:
+input      output
+test_si   test_so
+
+A4:
+test_se
+
+B1:
+Total cell area:          68204.927579
+Total area:               70261.927579
+
+B2:
+Total cell area:          73507.605022
+Total area:               74592.605022
+
+B3:
+Total cell area:
+(73507.605022-68204.927579)/68204.927579*100%=7.77%        
+Total area:
+(74592.605022-70261.927579)/70261.927579*100%=6.16%
+
+B4:
+由於加入scan chain 所以有更多的interconnect而導致面積增加
+
+C1:9.84
+
+C2:9.77
+
+C3:(9.77-9.84)/9.84*100%=-0.711%
+
+C4:可能因為scan chain在某個gate造成較多的dalay(比原本critical path多)增加而成為critical path
+
+D1:24661
+
+D2:683
+
+D3:99.87%
+
+D4:97.73%
