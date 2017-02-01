@@ -1,0 +1,21 @@
+$date
+    Feb  1, 2017  16:45:40
+$end
+$version
+    TOOL:	ncsim	10.20-s114
+$end
+$timescale
+    10 ps
+$end
+
+$scope module test_conv $end
+$var parameter 32 !    N_DATAOUT  $end
+$var parameter 32 "    N_DATAIN  $end
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+b1010000 "
+b1001011 !
+$end
+#119100
